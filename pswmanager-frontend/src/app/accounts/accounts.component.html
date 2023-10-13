@@ -1,0 +1,45 @@
+<div class="accounts">
+  <h2>Accounts</h2>
+
+  <!-- Add Account Form -->
+  <form (submit)="addAccount()">
+    <div class="form-group">
+      <label for="website">Website:</label>
+      <input type="text" id="website" name="website" [(ngModel)]="newAccount.url" required>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="newAccount.username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="newAccount.password" required>
+    </div>
+
+    <button type="submit">Add Account</button>
+  </form>
+
+  <!-- Display Accounts -->
+  <ul>
+    <li *ngFor="let account of getAccounts()" class="account-item">
+      <div class="account-info">
+        <span class="label">Website:</span>
+        <span class="info">{{ account.url }}</span>
+        <button class="copy-button" (click)="copyToClipboard(account.url)">Copy</button>
+      </div>
+      <div class="account-info">
+        <span class="label">Username:</span>
+        <span class="info">{{ account.username }}</span>
+        <button class="copy-button" (click)="copyToClipboard(account.username)">Copy</button>
+      </div>
+      <div class="account-info">
+        <span class="label">Password:</span>
+        <span class="info">{{ account.password }}</span>
+        <button class="copy-button" (click)="copyToClipboard(account.password)">Copy</button>
+      </div>
+      <button class="remove-button" (click)="removeAccount(account)">Remove</button>
+    </li>
+  </ul>
+</div>

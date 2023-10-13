@@ -1,0 +1,17 @@
+<div class="register-container">
+  <div class="register-form">
+    <h2>Register</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="masterPassword">Master password:</label>
+        <input type="password" id="masterPassword" name="masterPassword" [(ngModel)]="formData.password"  placeholder="Enter your master password" required>
+      </div>
+      <button type="submit" (click)="onRegister()" >Register</button>
+    </form>
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+</div>

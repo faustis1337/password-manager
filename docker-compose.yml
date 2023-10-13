@@ -1,0 +1,18 @@
+version: '3'
+services:
+  pswmanager-frontend:
+    image: pswmanager-frontend
+    build:
+      context: ./pswmanager-frontend
+      dockerfile: Dockerfile
+    container_name: pswmanager-frontend
+    ports:
+      - "4200:4200"
+  pswmanager-backend:
+    image: pswmanager-backend
+    build:
+      context: ./pswmanager-backend
+      dockerfile: Dockerfile
+    container_name: pswmanager-backend
+    ports:
+      - "4201:80"
