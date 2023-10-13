@@ -78,7 +78,7 @@ ul {
 .label {
   font-weight: bold;
   margin-right: 10px;
-  flex: 0 0 80px;
+  flex: 0 0 50px;
 }
 
 .info {
@@ -119,4 +119,17 @@ ul {
 
 .remove-button:hover {
   background-color: #f54d42;
+}
+.website-text-limit{
+  width: 125px; /* Set a fixed width for the container */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis;
+}
+
+.username-text-limit{
+  width: 70px; /* Set a fixed width for the container */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis;
 }

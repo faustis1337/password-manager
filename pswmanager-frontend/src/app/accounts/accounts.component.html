@@ -26,17 +26,21 @@
     <li *ngFor="let account of getAccounts()" class="account-item">
       <div class="account-info">
         <span class="label">Website:</span>
+        <div class="website-text-limit">
         <span class="info">{{ account.url }}</span>
+        </div>
         <button class="copy-button" (click)="copyToClipboard(account.url)">Copy</button>
       </div>
       <div class="account-info">
         <span class="label">Username:</span>
+        <div class="username-text-limit">
         <span class="info">{{ account.username }}</span>
+          </div>
         <button class="copy-button" (click)="copyToClipboard(account.username)">Copy</button>
       </div>
       <div class="account-info">
         <span class="label">Password:</span>
-        <span class="info">{{ account.password }}</span>
+        <span class="info">***</span>
         <button class="copy-button" (click)="copyToClipboard(account.password)">Copy</button>
       </div>
       <button class="remove-button" (click)="removeAccount(account)">Remove</button>
